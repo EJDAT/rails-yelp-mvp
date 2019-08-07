@@ -2,10 +2,12 @@
 
 one:
   name: MyString
-  address: MyText
+  address: MyString
+  phone_number: 1
   category: MyString
 
 two:
   name: MyString
-  address: MyText
+  address: MyString
+  phone_number: 1
   category: MyString

@@ -1,0 +1,15 @@
+<h1>Restaurants</h1>
+
+<ul id="restaurants">
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= @restaurants %>
+
+      <%= link_to restaurant.title, restaurant_path(restaurant.id) %>
+      ·
+      <%= link_to restaurant_path(restaurant.id), method: :delete, data: { confirm: "Delete #{restaurant.title}?" } do %>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
