@@ -1,13 +1,32 @@
-<%= link_to edit_restaurant_path(@restaurant.id), class: 'pull-right btn btn-default' do %>
-  <i class="fa fa-pencil"></i> Edit this restaurant
-<% end %>
+<p id="notice"><%= notice %></p>
 
-<h1><%= @restaurant.name %></h1>
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
 
-<p class="well"><%= @restaurant.address %></p>
+<p>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</p>
 
+<p>
+  <strong>Phone Number:</strong>
+  <%= @restaurant.phone_number %>
+</p>
 
-<hr>
-<%= link_to restaurants_path do %>
-  <i class="fa fa-history"></i> Back to list
-<% end %>
+<p>
+  <strong>Category:</strong>
+  <%= @restaurant.category %>
+</p>
+
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content %></li>
+  <% end %>
+</ul>
+
+<%= link_to ,  %>
+<%= link_to 'back', restaurants_path  %>
+<%= link_to ,  %>
+<%= link_to 'Ajouter une review', new_restaurant_review_path(@restaurant) %>
